@@ -53,9 +53,9 @@ export default function PaperCard({
 
   return (
     <div
-      onClick={paper.analysis_status === "processing" ? undefined : onClick}
+      onClick={paper.analysis_status !== "completed" ? undefined : onClick}
       className={`bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl overflow-hidden   transition-all duration-200 group ${
-        paper.analysis_status === "processing"
+        paper.analysis_status !== "completed"
           ? "opacity-75 cursor-not-allowed"
           : "hover:shadow-lg hover:scale-[1.02] cursor-pointer"
       }`}
@@ -63,7 +63,7 @@ export default function PaperCard({
       <div className="h-32 bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 flex items-center justify-center relative">
         <FileText
           className={`h-12 w-12 text-purple-600 transition-transform ${
-            paper.analysis_status === "processing"
+            paper.analysis_status !== "completed"
               ? "opacity-50"
               : "group-hover:scale-110"
           }`}
@@ -80,7 +80,7 @@ export default function PaperCard({
       <div className="p-4">
         <h3
           className={`font-semibold text-gray-800 mb-2 line-clamp-2  transition-colors ${
-            paper.analysis_status === "processing"
+            paper.analysis_status !== "completed"
               ? ""
               : "group-hover:text-purple-600"
           }`}
