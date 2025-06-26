@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { fetchPaperAPI } from "../../services/paper.service";
 import DocumentViewer from "../Document/DocumentViewer";
 import ChatInterface from "../Chat/ChatView";
@@ -17,12 +17,16 @@ export default function PaperPage() {
   const { paperId } = useParams<{ paperId: string }>();
   const [paper, setPaper] = useState<Paper | null>(null);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPaper = async () => {
       try {
         const response = await fetchPaperAPI(Number(paperId));
         setPaper(response.data);
+        if (response?.data?.analysis_status !== "completed") {
+          navigate("/library");
+        }
       } catch (error) {
         console.error("Failed to fetch paper:", error);
       } finally {
@@ -33,7 +37,7 @@ export default function PaperPage() {
     if (paperId) {
       fetchPaper();
     }
-  }, [paperId]);
+  }, [paperId, navigate]);
 
   if (loading) {
     return (

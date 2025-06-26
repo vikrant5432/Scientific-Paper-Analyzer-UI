@@ -1,15 +1,15 @@
 import { Menu, LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/userAuth";
 
 export default function Header({
   onMenuClick,
 }: Readonly<{ onMenuClick: () => void }>) {
   const navigate = useNavigate();
-
+  const authState = useAuth();
   const handleLogout = () => {
-    // Add your logout logic here (clear tokens, etc.)
-    localStorage.removeItem("token"); // Example
-    navigate("/login");
+    authState.logout();
+    navigate("/login", { replace: true });
   };
 
   return (

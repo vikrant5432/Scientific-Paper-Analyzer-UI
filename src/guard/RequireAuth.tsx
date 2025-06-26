@@ -12,6 +12,10 @@ const RequireAuth = ({ children }: { children: React.ReactNode }) => {
     }
   }, [isAuthenticated, navigate]);
 
+  if (!isAuthenticated) {
+    return null;
+  }
+
   return <>{children}</>;
 };
 

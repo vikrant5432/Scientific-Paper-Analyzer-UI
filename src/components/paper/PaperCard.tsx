@@ -53,11 +53,21 @@ export default function PaperCard({
 
   return (
     <div
-      onClick={onClick}
-      className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl overflow-hidden cursor-pointer hover:shadow-lg hover:scale-[1.02] transition-all duration-200 group"
+      onClick={paper.analysis_status === "processing" ? undefined : onClick}
+      className={`bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl overflow-hidden   transition-all duration-200 group ${
+        paper.analysis_status === "processing"
+          ? "opacity-75 cursor-not-allowed"
+          : "hover:shadow-lg hover:scale-[1.02] cursor-pointer"
+      }`}
     >
       <div className="h-32 bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 flex items-center justify-center relative">
-        <FileText className="h-12 w-12 text-purple-600 group-hover:scale-110 transition-transform" />
+        <FileText
+          className={`h-12 w-12 text-purple-600 transition-transform ${
+            paper.analysis_status === "processing"
+              ? "opacity-50"
+              : "group-hover:scale-110"
+          }`}
+        />
         <div className="absolute top-2 right-2">
           <div
             className={`inline-flex items-center space-x-1 px-2 py-1 rounded-full text-xs font-medium border ${getStatusColor()}`}
@@ -68,7 +78,13 @@ export default function PaperCard({
       </div>
 
       <div className="p-4">
-        <h3 className="font-semibold text-gray-800 mb-2 line-clamp-2 group-hover:text-purple-600 transition-colors">
+        <h3
+          className={`font-semibold text-gray-800 mb-2 line-clamp-2  transition-colors ${
+            paper.analysis_status === "processing"
+              ? ""
+              : "group-hover:text-purple-600"
+          }`}
+        >
           {paper.file_name}
         </h3>
 
