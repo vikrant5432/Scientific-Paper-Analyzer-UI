@@ -7,13 +7,16 @@ A modern, responsive frontend for the Scientific Paper Analyzer project. This UI
 ## Preview
 
 **Login Page Example:**  
-![Login Page](https://github-production-user-asset-6210df.s3.amazonaws.com/42002633/459368563-1214d6cc-5020-444c-96a8-050381f80dc2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250626%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250626T103817Z&X-Amz-Expires=300&X-Amz-Signature=b16e371047eaf78554d24bd63eeea82c75a46a5cdd8aa14025c320837110f155&X-Amz-SignedHeaders=host)
+![Login Page](https://github.com/user-attachments/assets/03fc2adb-47a7-4edb-8a20-6b7fc2a59bea)
+
 
 **Library Page Example:**  
-![Library Page](https://github-production-user-asset-6210df.s3.amazonaws.com/42002633/459369126-a858dfe5-4ac5-49cb-a8b9-9d55b55adf3a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250626%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250626T103800Z&X-Amz-Expires=300&X-Amz-Signature=4766eecbed46f4d3adc83d81f07f9c8a3b1c3cbbb1e5444d6217c1055d0cd092&X-Amz-SignedHeaders=host)
+![Library Page](https://github.com/user-attachments/assets/dfd51c47-d625-4c4b-a93e-916538fcd86d)
+
 
 **Dashboard Page Example:**
-![Dashboard Page](https://github-production-user-asset-6210df.s3.amazonaws.com/42002633/459369735-7074197c-c825-4740-955f-99994cd73331.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250626%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250626T103927Z&X-Amz-Expires=300&X-Amz-Signature=856d1b0a98307c849374b390d47079f53a2281e8800e858f3222993d135d303e&X-Amz-SignedHeaders=host)
+![Dashboard Page](https://github.com/user-attachments/assets/560237ed-52d8-4b08-98d7-03d6bac710f0)
+
 
 ---
 
